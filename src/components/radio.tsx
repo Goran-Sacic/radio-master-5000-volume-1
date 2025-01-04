@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useState, useEffect, useRef } from 'react';
 import { RadioBrowserApi } from 'radio-browser-api';
-import AudioPlayer from 'react-h5-audio-player';
+import AudioPlayer, { RHAP_UI } from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 /* import defaultImg from '../assets/radio_boombox.png'; */
 import defaultImg from '../assets/microphone.png';
@@ -235,6 +235,7 @@ const Radio: React.FunctionComponent /* <IAppProps> */ = () => {
 												/>
 												<div className={styles.stationName}>{station.name}</div>
 											</div>
+
 											<AudioPlayer
 												className={styles.player}
 												ref={(el) => (audioPlayersRef.current[index] = el)}
@@ -243,8 +244,8 @@ const Radio: React.FunctionComponent /* <IAppProps> */ = () => {
 												layout='stacked'
 												customProgressBarSection={[]}
 												customControlsSection={[
-													'MAIN_CONTROLS',
-													'VOLUME_CONTROLS',
+													RHAP_UI.MAIN_CONTROLS,
+													RHAP_UI.VOLUME_CONTROLS,
 												]}
 												autoPlayAfterSrcChange={false}
 												onPlay={() => {
@@ -325,8 +326,8 @@ const Radio: React.FunctionComponent /* <IAppProps> */ = () => {
 														layout='stacked'
 														customProgressBarSection={[]}
 														customControlsSection={[
-															'MAIN_CONTROLS',
-															'VOLUME_CONTROLS',
+															RHAP_UI.MAIN_CONTROLS,
+															RHAP_UI.VOLUME_CONTROLS,
 														]}
 														autoPlayAfterSrcChange={false}
 														onPlay={() => {
@@ -363,8 +364,8 @@ const Radio: React.FunctionComponent /* <IAppProps> */ = () => {
 														layout='stacked'
 														customProgressBarSection={[]}
 														customControlsSection={[
-															'MAIN_CONTROLS',
-															'VOLUME_CONTROLS',
+															RHAP_UI.MAIN_CONTROLS,
+															RHAP_UI.VOLUME_CONTROLS,
 														]}
 														autoPlayAfterSrcChange={false}
 														onPlay={() => {
